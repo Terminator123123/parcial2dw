@@ -1,0 +1,127 @@
+/* border-box se uso para que no se vea dañado como salido. */
+/*
+  Paleta básica:
+  Blanco (#FFFFFF): fondo de la página y superficies.
+  Gris claro (#F2F2F2): fondo de las filas alternas de la tabla.
+  Negro (#000000): texto principal.
+  Gris (#808080): bordes y texto secundario.
+  Rojo (#CC0000): encabezado del torneo.
+*/
+:root {
+  --color-principal: #CC0000;
+  --color-acento: #808080;
+  --color-fondo: #FFFFFF;
+  --color-fila-alterna: #F2F2F2;
+  --color-texto: #000000;
+  --color-texto-secundario: #808080;
+  --color-texto-claro: #FFFFFF;
+  --radio-base: 0.5rem;
+  --espaciado-base: 1rem;
+
+  --fuente-titulos: "Trebuchet MS", "Segoe UI", sans-serif;
+  --fuente-cuerpo: "Segoe UI", Arial, sans-serif;
+
+  --tamano-cuerpo: 1rem;
+  --tamano-h3: 1.25rem;
+  --tamano-h2: 1.5rem;
+  --tamano-h1: 2rem;
+  --tamano-letra-ronda: clamp(6rem, 24vw, 16rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--tamano-cuerpo);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+}
+
+h1 {
+  font-size: var(--tamano-h1);
+}
+
+h2 {
+  font-size: var(--tamano-h2);
+}
+
+h3 {
+  font-size: var(--tamano-h3);
+}
+
+header {
+  padding: calc(var(--espaciado-base) * 2);
+  text-align: center;
+  color: var(--color-texto-claro);
+  background-color: var(--color-principal);
+}
+
+header .letra-ronda {
+  margin: 0;
+  font-family: var(--fuente-titulos);
+  font-size: var(--tamano-letra-ronda);
+  font-weight: 700;
+  line-height: 1;
+}
+
+table {
+  width: 100%;
+  margin: calc(var(--espaciado-base) * 2) 0;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: var(--espaciado-base);
+  border: 1px solid var(--color-acento);
+  text-align: left;
+}
+
+thead th {
+  color: var(--color-texto-claro);
+  background-color: var(--color-principal);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-fila-alterna);
+}
+
+form fieldset {
+  padding: calc(var(--espaciado-base) * 1.5);
+  border: 1px solid var(--color-acento);
+  border-radius: var(--radio-base);
+}
+
+form label {
+  display: block;
+  margin: var(--espaciado-base) 0 0.35rem;
+}
+
+form input,
+form select {
+  width: 100%;
+  max-width: 30rem;
+  margin-bottom: var(--espaciado-base);
+  padding: 0.65rem;
+  border: 1px solid var(--color-acento);
+  border-radius: var(--radio-base);
+}
+
+input[type="number"] {
+  max-width: 10rem;
+}
+
+form button {
+  margin: var(--espaciado-base) var(--espaciado-base) 0 0;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--color-principal);
+  border-radius: var(--radio-base);
+}

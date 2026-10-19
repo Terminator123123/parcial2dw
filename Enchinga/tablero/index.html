@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchinga</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <header>
+      <h1>Enchinga</h1>
+      <p>Etapa: 4</p>
+      <p class="letra-ronda">E</p>
+      <a href="#reglas">Enlace a las reglas</a>
+      <a href="#tablero de juego">Enlace al tablero de juego</a>
+    </header>
+
+    <main>
+      <table>
+        <caption>Ejemplos de respuestas</caption>
+
+
+        <thead>
+
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Lugar</th>
+            <th scope="col">Animal</th>
+            <th scope="col">Objeto</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Comida</th>
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+          <tr>
+            <th scope="row">Estefami</th>
+            <td>Emirattos arabes</td>
+            <td>Elefante</td>
+            <td>Estufa</td>
+            <td>Esports</td>
+            <td>Empanada</td>
+          </tr>
+          <tr>
+            <th scope="row">Ezequiel</th>
+            <td>Ecuador</td>
+            <td>Escorpión</td>
+            <td>Estufa</td>
+            <td>Estío</td>
+            <td>Esperanza</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">Esteban</th>
+            <td>El Salvador</td>
+            <td>Erizo</td>
+            <td>Estufa</td>
+            <td>Estío</td>
+            <td>Entusiasmo</td>
+           
+          </tr>
+        </tbody>
+
+
+
+      </table>
+<aside id="tablero de juego">
+      <form>
+        <fieldset>
+          <legend>Escribe tus respuestas para la ronda</legend>
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Escribe un nombre" pattern="[Ee][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Empieza con E y tiene al menos tres letras" required>
+
+          <label for="lugar">Lugar:</label>
+          <input type="text" id="lugar" name="lugar" placeholder="Escribe un lugar" pattern="[Ee][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Empieza con E y tiene al menos tres letras" required>
+
+          <label for="animal">Animal:</label>
+          <input type="text" id="animal" name="animal" placeholder="Escribe un animal" pattern="[Ee][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Empieza con E y tiene al menos tres letras" required>
+
+          <label for="objeto">Objeto:</label>
+          <input type="text" id="objeto" name="objeto" placeholder="Escribe un objeto" pattern="[Ee][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Empieza con E y tiene al menos tres letras" required>
+
+          <label for="marca">Marca:</label>
+          <input type="text" id="marca" name="marca" placeholder="Escribe una marca" pattern="[Ee][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Empieza con E y tiene al menos tres letras" required>
+
+          <label for="comida">Comida:</label>
+          <input type="text" id="comida" name="comida" placeholder="Escribe una comida" pattern="[Ee][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Empieza con E y tiene al menos tres letras" required>
+
+          <label for="letra">Elige la letra del sorteo:</label>
+          <select id="letra" name="letra" required>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E" selected>E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="N">N</option>
+            <option value="O">O</option>
+            <option value="P">P</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+            <option value="T">T</option>
+            <option value="U">U</option>
+            <option value="V">V</option>
+          </select>
+
+          <label for="ronda">Numero de ronda:</label>
+          <input type="number" id="ronda" name="ronda" min="1" max="5" value="1" required>
+
+          <p>Timbre del torneo:</p>
+          <audio controls>
+            <source src="recursos/timbre.mp3" type="audio/mpeg">
+          </audio>
+
+          <p>Enchinga:</p>
+          <img src="recursos/stop.webp" alt="Escudo del torneo Enchinga">
+
+          <button type="submit">¡STOP!</button>
+          <button type="reset">Empezar de nuevo</button>
+        </fieldset>
+      </form>
+      </aside>
+    </main>
+
+    <aside id="reglas">
+      <h2>Enunciado: reglas y categorias</h2>
+      <h3>Reglas del torneo</h3>
+      <ol>
+        
+        <li>El parcial es individual. Cada estudiante entrega su propio repositorio</li>
+        <li>Duración: 120 minutos exactos. El cronómetro es público y no se detiene</li>
+        <li>La letra del torneo se sortea al minuto cero y es la misma para todo el grupo. Todo el contenido que usted invente —nombres, respuestas, nombre del torneo— debe empezar por esa letra</li>
+        <li>Las rondas son secuenciales: lo que construye en una es el insumo de la siguiente</li>
+        <li>Al final de cada ronda el profesor anuncia ¡STOP!: todos hacen commit con el formato ronda-NN: descripción. El historial de git es parte de la evaluación.</li>
+        <li>Se permite consultar documentación oficial: MDN, react.dev, getbootstrap.com y la documentación de TypeScript</li>
+        <li>No se permiten asistentes de inteligencia artificial, código propio de proyectos anteriores ni plantillas descargadas</li>
+        <li>Todo se escribe durante el parcial, desde una carpeta vacía. Lo único que recibe es el kit del torneo</li>
+        <li>No se evalúa backend, bases de datos ni estado en React: este parcial cubre HTML, CSS, JavaScript y componentes con props</li>
+        <li>Cada estudiante tiene dos comodines PISTA (el profesor responde una duda puntual; cuesta el 10 % de esa ronda) y un comodín SALTO (usa el archivo de rescate del kit para continuar; esa ronda vale 0 pero la cadena no se rompe).</li>
+        <li>Si una ronda no le funciona, documente en BITACORA.md qué intentó y qué error obtuvo: eso otorga puntaje parcial</li>
+        <li>La entrega se hace dentro del tiempo. Lo que llegue después no se evalúa</li>
+      </ol>
+      <h3>En estas seis categorias se juega</h3>
+      <ul>
+        <li>Nombre</li>
+        <li>Lugar</li>
+        <li>Animal</li>
+        <li>Objeto</li>
+        <li>Marca</li>
+        <li>Comida</li>
+      </ul>
+    </aside>
+
+    <footer>
+      <p>Estudiante: Shalem Grupo: 1 </p>
+    </footer>
+  </body>
+</html>
